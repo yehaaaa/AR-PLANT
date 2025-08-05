@@ -19,7 +19,7 @@ To overcome these difficulties, this study proposes the AR-Plant system. This sy
 
 The AR-Plant system significantly enhances labeling efficiency, reducing the average time required to label one plant to only 53.8% of the time needed by traditional software like Semantic Segmentation Editor (SSE) and 56.7% of the time needed by CloudCompare. More importantly, with only 32.3% of points manually labeled, the system's inferred organ labels achieved a mean weighted coverage (mWCov) of 97.1%, a result approaching expert-level fully manual labeling accuracy. Furthermore, the system integrates automatic assistance strategies and features a scalable collaborative prototype, demonstrating broad application potential not only in agriculture but also in other fields.
 
-![System Architecture](System Architecture.jpg)
+![System Architecture](./System_Architecture.jpg)
 
-![Experimental Procedure](Experimental Procedure.jpg)
+![Experimental Procedure](./Experimental_Procedure.jpg)
 
