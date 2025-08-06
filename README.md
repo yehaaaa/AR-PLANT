@@ -22,4 +22,42 @@ The AR-Plant system significantly enhances labeling efficiency, reducing the ave
 ![System Architecture](./System_Architecture.jpg)
 
 ![Experimental Procedure](./Experimental_Procedure.jpg)
+## Quick Start
+The main open-source project consists of two parts:  
+a C# project for HOLOLENS2 and a Python project for the host PC.
 
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/yehaaaa/AR-PLANT.git
+   ```
+
+2. **Open the project in Unity**
+   - Launch Unity Hub, click "Add", and select the project folder (`AR-PLANT`).
+   - It is recommended to use Unity version 2021.3.36f1c1.
+
+3. **Install dependencies**
+   - Unity will automatically install dependencies based on [Packages/manifest.json](HololensTcp/Packages/manifest.json).
+   - If prompted about missing packages, click "Fix" or "Reimport".
+   - For more information about the Unity HOLOLENS2 development environment, refer to: https://learn.microsoft.com/en-us/windows/mixed-reality/
+
+4. **Set IP address and port**
+   - In the Unity Editor, open the scene (usually under `Assets/Scenes` or `Assets`).
+   - In the Hierarchy, select the TCP object and configure the host PC's IP address and port in the Inspector.
+![inspector](./inspector.png)
+   - Deploy the project to HOLOLENS2. For deployment instructions, see: https://learn.microsoft.com/en-us/hololens/hololens-requirements
+
+5. **Deploy and start the host PC application**
+   - Open the `TCP+GCN` folder in your Python environment. Configure the IP address and port in `TCP.py` (must match the settings in Unity), and specify the relevant file paths.
+   - Start the host application with the following command:
+   ```bash
+   python TCP+GCN/TCP.py
+   ```
+
+6. **Run the Unity project and start labeling**
+   - On HOLOLENS2, open the HOLOLENSTCP project and click "Yes" in the pop-up window.
+   - If everything is set up correctly, the original point cloud will be rendered in your view. If not, please check that the IP address is configured correctly in the previous steps.
+   - Begin labeling the point cloud. (Refer to the paper for labeling methods.)
+
+7. **FAQ**
+   - If you encounter script compilation errors, ensure your Unity version and dependency packages match the requirements.
+   - For special configuration needs, please refer to other documents in this repository or contact
