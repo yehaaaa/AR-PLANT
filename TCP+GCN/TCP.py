@@ -11,7 +11,7 @@ roomNum = 0
 
 client_sockets = []
 
-host = '0.0.0.0' # Configure IP address, must be the same in UNITY
+host = '0.0.0.0' # Bind to all available network interfaces
 port = 2077 # Configure port, must be the same in UNITY
 
 # Create TCP socket
