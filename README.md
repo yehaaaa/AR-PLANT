@@ -61,3 +61,8 @@ a C# project for HOLOLENS2 and a Python project for the host PC.
 7. **FAQ**
    - If you encounter script compilation errors, ensure your Unity version and dependency packages match the requirements.
    - For special configuration needs, please refer to other documents in this repository or contact
+
+## Operational details
+![System Architecture](./fig-1.jpg)
+![System Architecture](./fig-2.jpg)
+![System Architecture](./fig-3.jpg)
