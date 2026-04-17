@@ -71,34 +71,125 @@ a C# project for HOLOLENS2 and a Python project for the host PC.
 
 ![System Architecture](./fig-3.jpg)
 
-1. **Features**
-    - Dual-platform support: Synchronous annotation on PC Unity Editor + HoloLens AR device
-    - Semi-automatic annotation: SOM-assisted initial labeling + GCN label propagation to reduce manual annotation effort
-    - Intuitive 3D interaction: Supports point cloud rotation, scaling, and box selection
-    - Automatic structural decomposition of plant stems and leaves
-    - Real-time TCP communication for bidirectional data transmission between PC and AR device
-2. **Environment Setup**
-   - Clone the Repository：
-   ```sh
-   git clone https://github.com/yehaaaa/AR-PLANT.git
-   ```
-   - Dependencies：
-   ```sh
-   PC: Python 3.8+, PyTorch, NumPy, Open3D
-   AR: Unity 2020.3+, HoloLens development environment
-   ```
-3. **PC Configuration**
-   - Enter the TCP+GCN folder. Main file functions:
-   - TCP.py: Main PC program, responsible for TCP communication and data transmission
-   - GCN_train.py: Main script for GCN label propagation
-   - GCN_utils.py: GCN utility functions
-   - layers.py / models.py: GCN network structure definition
-   - SOM.py: Self-organizing map assisted labeling module
-4. **TCP Configuration**
-   - In TCP.py, set the port (default: 2077), which must match the Unity project:
-   ```sh
-   host = '0.0.0.0'
-   port = 2077
-   ```
+## Features
 
+- **Dual-platform support**：PC Unity Editor 与 HoloLens AR 设备同步标注  
+- **Semi-automatic annotation**：SOM 辅助初始标注 + GCN 标签传播，减少手工标注工作量  
+- **Intuitive 3D interaction**：支持点云旋转、缩放、框选（box selection）  
+- **Automatic structural decomposition**：自动进行植物茎叶结构分解  
+- **Real-time TCP communication**：PC 与 AR 设备间双向实时 TCP 通信与数据传输  
+
+---
+
+## Environment Setup
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/yehaaaa/AR-PLANT.git
+```
+
+### Dependencies
+
+- **PC**：Python 3.8+，PyTorch，NumPy，Open3D  
+- **AR**：Unity 2020.3+，HoloLens 开发环境  
+
+## PC Configuration
+
+进入 `TCP+GCN` 文件夹。主要文件功能如下：
+
+- `TCP.py`：PC 主程序，负责 TCP 通信与数据传输  
+- `GCN_train.py`：GCN 标签传播主脚本  
+- `GCN_utils.py`：GCN 工具函数  
+- `layers.py` / `models.py`：GCN 网络结构定义  
+- `SOM.py`：自组织映射（SOM）辅助标注模块  
+
+---
+
+## TCP Configuration
+
+### 1) 端口设置
+
+在 `TCP.py` 中设置端口（默认 `2077`），需要与 Unity 项目保持一致：
+
+```python
+host = '0.0.0.0'
+port = 2077
+```
+
+### 2) 获取本机 IP（用于 AR 端配置）
+
+在 Windows CMD 中运行：
+
+```bash
+ipconfig
+```
+
+记录本机 **IPv4 地址**，用于 Unity/HoloLens 的连接配置。
+
+### 3) 文件路径配置
+
+在 `TCP.py` 中设置点云相关路径：
+
+```python
+path_origin = "Your point cloud folder path"
+name = "point_cloud_file_name.txt"
+path_tem = "Temporary save path"
+path_gcn = "GCN result save path"
+```
+
+### 4) 启动服务
+
+```bash
+python TCP.py
+```
+
+当出现以下提示时表示启动成功：
+
+- `Server started, waiting for client connection`
+
+---
+
+## AR Project (Unity / HoloLens) Configuration
+
+1. 打开 `HololensTcp` 文件夹并导入 Unity 工程  
+2. 在通信脚本中填写：
+   - PC 的 **IP 地址**
+   - 端口：`2077`
+3. Build 并运行，连接到 PC
+
+---
+
+## Annotation Workflow
+
+1. 启动 Unity 或 HoloLens 应用并建立 TCP 连接  
+2. 加载点云后，通过视角控制调整观察角度  
+3. 点击 **Tagging** 启用标注工具，并拖动滑块调整标注框大小  
+4. 使用 **LabelChange** 切换标注类别；使用 **ModChange** 切换 SOM / 手动模式  
+5. 用标注框选择点云区域并点击 **Tagging** 完成标注  
+6. 点击 **SendData** 将半自动标注数据发送至 PC  
+7. PC 端自动执行 **GCN 标签传播**  
+8. 点击 **ReceiveData** 接收完整标注结果  
+9. 点击 **Decompose** 进行自动茎叶结构分解  
+
+---
+
+## Button Functions
+
+- **Tagging**：执行标注  
+- **Bound On/Off**：显示 / 隐藏点云包围框  
+- **SendData**：发送半标注数据到 PC  
+- **ReceiveData**：接收 GCN 传播后的结果  
+- **Decompose**：茎叶结构分解  
+- **ModChange**：切换标注模式（SOM / 手动）  
+- **LabelChange**：切换标注标签类别  
+
+---
+
+## Notes
+
+- PC 与 AR 设备必须处于同一局域网  
+- 确保 IP 与端口一致，否则无法连接  
+- 建议先使用 SOM 辅助标注，再进行人工校正以提高效率  
+- 若出现连接错误，可尝试重启 `TCP.py` 与 Unity 项目  
 
