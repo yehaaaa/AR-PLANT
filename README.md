@@ -70,7 +70,7 @@ Enter the TCP+GCN folder. Main file functions:
 
 ## TCP Configuration
 
-### 1) 端口设置
+### 1) Port Configuration
 
 Set the port in TCP.py (default 2077), which must match the Unity project:
 
@@ -79,7 +79,7 @@ host = '0.0.0.0'
 port = 2077
 ```
 
-### 2) 获取本机 IP（用于 AR 端配置）
+### 2) Get Local IP (for AR configuration)
 
 Run in Windows CMD:
 
