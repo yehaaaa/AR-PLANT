@@ -64,5 +64,9 @@ a C# project for HOLOLENS2 and a Python project for the host PC.
 
 ## Operational details
 ![System Architecture](./fig-1.jpg)
+
+
 ![System Architecture](./fig-2.jpg)
+
+
 ![System Architecture](./fig-3.jpg)
