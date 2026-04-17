@@ -70,3 +70,35 @@ a C# project for HOLOLENS2 and a Python project for the host PC.
 
 
 ![System Architecture](./fig-3.jpg)
+
+1. **Features**
+    - Dual-platform support: Synchronous annotation on PC Unity Editor + HoloLens AR device
+    - Semi-automatic annotation: SOM-assisted initial labeling + GCN label propagation to reduce manual annotation effort
+    - Intuitive 3D interaction: Supports point cloud rotation, scaling, and box selection
+    - Automatic structural decomposition of plant stems and leaves
+    - Real-time TCP communication for bidirectional data transmission between PC and AR device
+2. **Environment Setup**
+   - Clone the Repository：
+   ```sh
+   git clone https://github.com/yehaaaa/AR-PLANT.git
+   ```
+   - Dependencies：
+   ```sh
+   PC: Python 3.8+, PyTorch, NumPy, Open3D
+   AR: Unity 2020.3+, HoloLens development environment
+   ```
+3. **PC Configuration**
+   - Enter the TCP+GCN folder. Main file functions:
+   - TCP.py: Main PC program, responsible for TCP communication and data transmission
+   - GCN_train.py: Main script for GCN label propagation
+   - GCN_utils.py: GCN utility functions
+   - layers.py / models.py: GCN network structure definition
+   - SOM.py: Self-organizing map assisted labeling module
+4. **TCP Configuration**
+   - In TCP.py, set the port (default: 2077), which must match the Unity project:
+   ```sh
+   host = '0.0.0.0'
+   port = 2077
+   ```
+
+
