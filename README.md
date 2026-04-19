@@ -27,9 +27,6 @@ In this repository, we release two different versions for AR-Plant. The first ve
 
 ![System Architecture](./System_Architecture.jpg)
 
-![Experimental Procedure](./Experimental_Procedure.jpg)
-
-
 ## Operational details
 ![System Architecture](./fig-1.jpg)
 
