@@ -9,7 +9,7 @@ Published on *ISPRS Journal of Photogrammetry and Remote Sensing* in 2025<br>
 [[8-minute presentation](https://www.bilibili.com/video/BV1BgsRzhEQj)]<br>
 
 ## Prerequisites
-* Hololens2 HMD
+* Hololens2 ARHMD
 * PC/Workstation with an Nvidia GPU 
 * Unity == 2021.3.36f1c1
 * Python == 3.11.4
@@ -23,7 +23,7 @@ To overcome these difficulties, this study proposes the AR-Plant system. This sy
 
 On a plant point cloud dataset, the AR-Plant system significantly enhances labeling efficiency, reducing the average time required to label one plant to only 53.8% of the time needed by a traditional software Semantic Segmentation Editor (SSE) and 56.7% of the time needed by CloudCompare. More importantly, with only 32.3% of points manually labeled, the system's inferred organ labels achieved a mean weighted coverage (mWCov) of 97.1%, a result approaching expert-level fully-manual labeling quality. Furthermore, the system integrates automatic assistance strategies and features a scalable collaborative prototype (in alpha version, not ready for release in open), demonstrating broad application potential not only in agriculture but also in other fields that processes point clouds.
 
-In this repository, we release two different versions for AR-Plant. The first version--AR version works on an ARHMD (Hololens2) with the support of a PC/Workstation (with Nvidia GPU) as upper computer for calculation task; the second version--PC version works directly on a PC/Workstation (with Nvidia GPU) and funtions as an 3D anotation software.   
+In this repository, we release two different versions for AR-Plant. The first version--AR version works on an ARHMD (Hololens2) with the support of a PC/Workstation (with Nvidia GPU) as upper computer for calculation task; the second version--PC version works directly on a PC/Workstation (with Nvidia GPU) and funtions as an 3D anotation software without the ARHMD device such as Hololens2.   
 
 ![System Architecture](./System_Architecture.jpg)
 
