@@ -127,11 +127,11 @@ Service starts successfully when you see:
 
 ## Annotation Workflow
 
-1. Launch Unity or HoloLens application and establish a TCP connection
-2. After loading the point cloud, adjust the viewing angle via view controls
-3. Click Tagging to enable the annotation tool, and drag the slider to adjust the annotation box size
-4.  Use LabelChange to switch annotation categories; use ModChange to switch between SOM / manual mode
-5. Select the point cloud area with the annotation box and click Tagging to finish labeling
+1. Launch Unity or HoloLens2 application and establish a TCP connection
+2. After loading the point cloud, adjust the viewing angle via view controls for better manipulation
+3. Click "Tagging" to enable the annotation tool, and drag the slider to adjust the annotation box size
+4. Use "LabelChange" to switch label index (categories); use "ModChange" to switch between SOM/pure-manual mode
+5. Select the point cloud area with the annotation widget and click Tagging to finish labeling
 6. Click SendData to send semi-annotated data to the PC
 7. The PC automatically performs GCN label propagation
 8. Click ReceiveData to receive the fully annotated results
