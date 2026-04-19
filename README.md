@@ -143,11 +143,11 @@ Service starts successfully when you see:
 
 - **Tagging**：Perform annotation  
 - **Bound On/Off**：Show / hide point cloud bounding box 
-- **SendData**：Send semi-annotated data to PC
+- **SendData**：Send partially annotated data to PC/Workstation
 - **ReceiveData**：Receive results after GCN propagation  
-- **Decompose**：Stem and leaf structure decomposition  
+- **Decompose**：Plant structure decomposition  
 - **ModChange**：Switch annotation mode (SOM / Manual)  
-- **LabelChange**：Switch annotation label category 
+- **LabelChange**：Switch label index
 
 ---
 
