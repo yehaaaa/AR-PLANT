@@ -2,8 +2,8 @@
 This repo contains the official codes for our paper:
 
 ### AR-Plant: AR-based semi-automatic labeling system for 3D plant organs
-[D. Li†](https://davidleepp.github.io/), T. Li†, S. Xu, and S. Jin*
-† Equal contribution
+[D. Li†](https://davidleepp.github.io/), T. Li†, S. Xu, and S. Jin*<br>
+† Equal contribution<br>
 Published on *ISPRS Journal of Photogrammetry and Remote Sensing* in 2025<br>
 [[Paper](https://www.sciencedirect.com/science/article/abs/pii/S0924271625003922)]
 [[8-minute presentation](https://www.bilibili.com/video/BV1BgsRzhEQj)]<br>
