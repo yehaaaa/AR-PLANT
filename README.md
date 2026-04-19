@@ -131,11 +131,11 @@ Service starts successfully when you see:
 2. After loading the point cloud, adjust the viewing angle via view controls for better manipulation
 3. Click "Tagging" to enable the annotation tool, and drag the slider to adjust the annotation box size
 4. Use "LabelChange" to switch label index (categories); use "ModChange" to switch between SOM/pure-manual mode
-5. Select the point cloud area with the annotation widget and click Tagging to finish labeling
-6. Click SendData to send semi-annotated data to the PC
-7. The PC automatically performs GCN label propagation
-8. Click ReceiveData to receive the fully annotated results
-9. Click Decompose to perform automatic stem-leaf structural decomposition
+5. Select the point cloud area with the annotation widget and click "Tagging" to do labeling of all points inside that widget.
+6. Click "SendData" to send sparsely annotated point cloud data to the upper PC/Workstation
+7. The PC/Workstation automatically performs GCN-based label propagation
+8. Click "ReceiveData" to receive the fully-annotated results from PC/Workstation
+9. Click "Decompose" to perform automatic plant structural decomposition
 
 ---
 
