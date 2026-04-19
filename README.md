@@ -155,6 +155,6 @@ Service starts successfully when you see:
 
 - PC and AR device must be on the same local network
 - Ensure the IP address and port number match, otherwise connection will fail  
-- It is recommended to use SOM-assisted labeling first, then manual correction for better efficiency  
+- It is recommended to use SOM-assisted labeling first, then conduct manual correction for better efficiency and accuracy  
 - If connection errors occur, try restarting TCP.py and the Unity project 
 
