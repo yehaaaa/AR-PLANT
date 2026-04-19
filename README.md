@@ -38,11 +38,11 @@ In this repository, we release two different versions for AR-Plant. The first ve
 
 ## Features
 
-- **Dual-platform support**: Synchronous annotation on PC Unity Editor and HoloLens AR device
-- **Semi-automatic annotation**: SOM-assisted initial labeling + GCN label propagation to reduce manual annotation effort
+- **Dual-platform support**: Capable of annotating on PC Unity Editor or on Microsoft HoloLens2 ARHMD device
+- **Semi-automatic annotation**: Semi-automatic SOM-assisted initial labeling + GCN label propagation to reduce manual annotation workload
 - **Intuitive 3D interaction**: Supports point cloud rotation, scaling, and box selection
-- **Automatic structural decomposition**: Automatic decomposition of plant stem and leaf structures
-- **Real-time TCP communication**: Bidirectional real-time TCP communication and data transmission between PC and AR device
+- **Automatic structural decomposition**: Automatic decomposition of segmented plant organs/parts in visualization
+- **Real-time TCP communication**: Bidirectional real-time TCP communication and data transmission between PC and AR device (for AR-version)
 
 ---
 
