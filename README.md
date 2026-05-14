@@ -28,19 +28,19 @@ In this repository, we release two different versions for AR-Plant. The first ve
 ![System Architecture](./System_Architecture.jpg)
 
 ## Operation Guidance
-![System Architecture](./fig-1-E.jpg)
+![System Architecture](./fig-1-E.JPG)
 
 
 ![System Architecture](./fig-1-C.jpg)
 
 
-![System Architecture](./fig-2-E.jpg)
+![System Architecture](./fig-2-E.JPG)
 
 
 ![System Architecture](./fig-2-C.jpg)
 
 
-![System Architecture](./fig-3-E.jpg)
+![System Architecture](./fig-3-E.JPG)
 
 
 ![System Architecture](./fig-3-C.jpg)
